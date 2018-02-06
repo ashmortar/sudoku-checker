@@ -26,15 +26,26 @@ export class Puzzle {
     let arraysToCheck = [this.row1, this.row2, this.row3, this.row4, this.row5, this.row6, this.row7, this.row8, this.row9, this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7, this.col8, this.col9];
     let correct = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let results = [];
-    for (i = 0; i < arraysToCheck.length; i++) {
-      arraysToCheck[i].sort();
-      if (arraysToCheck[i] === correct) {
-        results.push("pass");
-      } else {
-        results.push("fail")
-      }
+    for(var i = 0; i < arraysToCheck.length; i++) {
+      let array = arraysToCheck[i].sort();
+      console.log(array);
+      let arrayResults = [];
+      console.log("outer loop at state: "+i+"\n");
+        for(var j = 0; j < array.length; j++){
+            console.log("inner loop at state: "+ j);
+            if(array[j] == correct[j]){//just adding a newline for readability purpose
+                arrayResults.push('pass');
+            } else {
+              arrayResults.push('fail');
+            }
+        }
+        if(arrayResults.includes("fail")) {
+          results.push("fail");
+        } else {
+          results.push("pass");
+        }
     }
     console.log(results);
+    return results;
   }
-
 }
