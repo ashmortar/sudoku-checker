@@ -1,7 +1,7 @@
 {
   "name": "sudoku-checker",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "authors": [
     "Aaron Ross <ashmortar@gmail.com>"
   ],

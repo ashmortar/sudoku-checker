@@ -30,13 +30,15 @@ export class Puzzle {
       let array = arraysToCheck[i].sort();
       console.log(array);
       let arrayResults = [];
-      console.log("outer loop at state: "+i+"\n");
+      console.log("arrayResults: "+i);
         for(var j = 0; j < array.length; j++){
-            console.log("inner loop at state: "+ j);
+            console.log("array:  "+ j);
             if(array[j] == correct[j]){//just adding a newline for readability purpose
                 arrayResults.push('pass');
+                console.log('pass');
             } else {
-              arrayResults.push('fail');
+              arrayResults.push('fail')
+              console.log('fail');;
             }
         }
         if(arrayResults.includes("fail")) {
@@ -46,6 +48,10 @@ export class Puzzle {
         }
     }
     console.log(results);
-    return results;
+    if(results.includes("fail")) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
