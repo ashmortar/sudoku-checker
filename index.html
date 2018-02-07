@@ -2,194 +2,123 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/app.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Ping Pong</title>
+    <title>Sudoku Checker</title>
   </head>
   <body>
-    <form id="sudoku-form">
-      <p>row 1</p>
-      <label for="r1c1">position r1c1</label>
-      <input id="r1c1" name="r1c1" type="number" value="1">
-      <label for="r1c2">position r1c2</label>
-      <input id="r1c2" name="r1c2" type="number" value="2">
-      <label for="r1c3">position r1c3</label>
-      <input id="r1c3" name="r1c3" type="number" value="3">
-      <label for="r1c4">position r1c4</label>
-      <input id="r1c4" name="r1c4" type="number" value="4">
-      <label for="r1c5">position r1c5</label>
-      <input id="r1c5" name="r1c5" type="number" value="5">
-      <label for="r1c6">position r1c6</label>
-      <input id="r1c6" name="r1c6" type="number" value="6">
-      <label for="r1c7">position r1c7</label>
-      <input id="r1c7" name="r1c7" type="number" value="7">
-      <label for="r1c8">position r1c8</label>
-      <input id="r1c8" name="r1c8" type="number" value="8">
-      <label for="r1c9">position r1c9</label>
-      <input id="r1c9" name="r1c9" type="number" value="9">
-
-      <p>row 2</p>
-      <label for="r2c1">position r2c1</label>
-      <input id="r2c1" name="r2c1" type="number" value="9">
-      <label for="r2c2">position r2c2</label>
-      <input id="r2c2" name="r2c2" type="number" value="8">
-      <label for="r2c3">position r2c3</label>
-      <input id="r2c3" name="r2c3" type="number" value="7">
-      <label for="r2c4">position r2c4</label>
-      <input id="r2c4" name="r2c4" type="number" value="6">
-      <label for="r2c5">position r2c5</label>
-      <input id="r2c5" name="r2c5" type="number" value="5">
-      <label for="r2c6">position r2c6</label>
-      <input id="r2c6" name="r2c6" type="number" value="4">
-      <label for="r2c7">position r2c7</label>
-      <input id="r2c7" name="r2c7" type="number" value="3">
-      <label for="r2c8">position r2c8</label>
-      <input id="r2c8" name="r2c8" type="number" value="2">
-      <label for="r2c9">position r2c9</label>
-      <input id="r2c9" name="r2c9" type="number" value="1">
-
-      <p>row 3</p>
-      <label for="r3c1">position r3c1</label>
-      <input id="r3c1" name="r3c1" type="number" value="9">
-      <label for="r3c2">position r3c2</label>
-      <input id="r3c2" name="r3c2" type="number" value="8">
-      <label for="r3c3">position r3c3</label>
-      <input id="r3c3" name="r3c3" type="number" value="7">
-      <label for="r3c4">position r3c4</label>
-      <input id="r3c4" name="r3c4" type="number" value="6">
-      <label for="r3c5">position r3c5</label>
-      <input id="r3c5" name="r3c5" type="number" value="5">
-      <label for="r3c6">position r3c6</label>
-      <input id="r3c6" name="r3c6" type="number" value="4">
-      <label for="r3c7">position r3c7</label>
-      <input id="r3c7" name="r3c7" type="number" value="3">
-      <label for="r3c8">position r3c8</label>
-      <input id="r3c8" name="r3c8" type="number" value="2">
-      <label for="r3c9">position r3c9</label>
-      <input id="r3c9" name="r3c9" type="number" value="1">
-
-      <p>row 4</p>
-      <label for="r4c1">position r4c1</label>
-      <input id="r4c1" name="r4c1" type="number" value="9">
-      <label for="r4c2">position r4c2</label>
-      <input id="r4c2" name="r4c2" type="number" value="8">
-      <label for="r4c3">position r4c3</label>
-      <input id="r4c3" name="r4c3" type="number" value="7">
-      <label for="r4c4">position r4c4</label>
-      <input id="r4c4" name="r4c4" type="number" value="6">
-      <label for="r4c5">position r4c5</label>
-      <input id="r4c5" name="r4c5" type="number" value="5">
-      <label for="r4c6">position r4c6</label>
-      <input id="r4c6" name="r4c6" type="number" value="4">
-      <label for="r4c7">position r4c7</label>
-      <input id="r4c7" name="r4c7" type="number" value="3">
-      <label for="r4c8">position r4c8</label>
-      <input id="r4c8" name="r4c8" type="number" value="2">
-      <label for="r4c9">position r4c9</label>
-      <input id="r4c9" name="r4c9" type="number" value="1">
-
-      <p>row 5</p>
-      <label for="r5c1">position r5c1</label>
-      <input id="r5c1" name="r5c1" type="number" value="9">
-      <label for="r5c2">position r5c2</label>
-      <input id="r5c2" name="r5c2" type="number" value="8">
-      <label for="r5c3">position r5c3</label>
-      <input id="r5c3" name="r5c3" type="number" value="7">
-      <label for="r5c4">position r5c4</label>
-      <input id="r5c4" name="r5c4" type="number" value="6">
-      <label for="r5c5">position r5c5</label>
-      <input id="r5c5" name="r5c5" type="number" value="5">
-      <label for="r5c6">position r5c6</label>
-      <input id="r5c6" name="r5c6" type="number" value="4">
-      <label for="r5c7">position r5c7</label>
-      <input id="r5c7" name="r5c7" type="number" value="3">
-      <label for="r5c8">position r5c8</label>
-      <input id="r5c8" name="r5c8" type="number" value="2">
-      <label for="r5c9">position r5c9</label>
-      <input id="r5c9" name="r5c9" type="number" value="1">
-
-      <p>row 6</p>
-      <label for="r6c1">position r6c1</label>
-      <input id="r6c1" name="r6c1" type="number" value="9">
-      <label for="r6c2">position r6c2</label>
-      <input id="r6c2" name="r6c2" type="number" value="8">
-      <label for="r6c3">position r6c3</label>
-      <input id="r6c3" name="r6c3" type="number" value="7">
-      <label for="r6c4">position r6c4</label>
-      <input id="r6c4" name="r6c4" type="number" value="6">
-      <label for="r6c5">position r6c5</label>
-      <input id="r6c5" name="r6c5" type="number" value="5">
-      <label for="r6c6">position r6c6</label>
-      <input id="r6c6" name="r6c6" type="number" value="4">
-      <label for="r6c7">position r6c7</label>
-      <input id="r6c7" name="r6c7" type="number" value="3">
-      <label for="r6c8">position r6c8</label>
-      <input id="r6c8" name="r6c8" type="number" value="2">
-      <label for="r6c9">position r6c9</label>
-      <input id="r6c9" name="r6c9" type="number" value="1">
-
-      <p>row 7</p>
-      <label for="r7c1">position r7c1</label>
-      <input id="r7c1" name="r7c1" type="number" value="9">
-      <label for="r7c2">position r7c2</label>
-      <input id="r7c2" name="r7c2" type="number" value="8">
-      <label for="r7c3">position r7c3</label>
-      <input id="r7c3" name="r7c3" type="number" value="7">
-      <label for="r7c4">position r7c4</label>
-      <input id="r7c4" name="r7c4" type="number" value="6">
-      <label for="r7c5">position r7c5</label>
-      <input id="r7c5" name="r7c5" type="number" value="5">
-      <label for="r7c6">position r7c6</label>
-      <input id="r7c6" name="r7c6" type="number" value="4">
-      <label for="r7c7">position r7c7</label>
-      <input id="r7c7" name="r7c7" type="number" value="3">
-      <label for="r7c8">position r7c8</label>
-      <input id="r7c8" name="r7c8" type="number" value="2">
-      <label for="r7c9">position r7c9</label>
-      <input id="r7c9" name="r7c9" type="number" value="1">
-
-      <p>row 8</p>
-      <label for="r8c1">position r8c1</label>
-      <input id="r8c1" name="r8c1" type="number" value="9">
-      <label for="r8c2">position r8c2</label>
-      <input id="r8c2" name="r8c2" type="number" value="8">
-      <label for="r8c3">position r8c3</label>
-      <input id="r8c3" name="r8c3" type="number" value="7">
-      <label for="r8c4">position r8c4</label>
-      <input id="r8c4" name="r8c4" type="number" value="6">
-      <label for="r8c5">position r8c5</label>
-      <input id="r8c5" name="r8c5" type="number" value="5">
-      <label for="r8c6">position r8c6</label>
-      <input id="r8c6" name="r8c6" type="number" value="4">
-      <label for="r8c7">position r8c7</label>
-      <input id="r8c7" name="r8c7" type="number" value="3">
-      <label for="r8c8">position r8c8</label>
-      <input id="r8c8" name="r8c8" type="number" value="2">
-      <label for="r8c9">position r8c9</label>
-      <input id="r8c9" name="r8c9" type="number" value="1">
-
-      <p>row 9</p>
-      <label for="r9c1">position r9c1</label>
-      <input id="r9c1" name="r9c1" type="number" value="9">
-      <label for="r9c2">position r9c2</label>
-      <input id="r9c2" name="r9c2" type="number" value="8">
-      <label for="r9c3">position r9c3</label>
-      <input id="r9c3" name="r9c3" type="number" value="7">
-      <label for="r9c4">position r9c4</label>
-      <input id="r9c4" name="r9c4" type="number" value="6">
-      <label for="r9c5">position r9c5</label>
-      <input id="r9c5" name="r9c5" type="number" value="5">
-      <label for="r9c6">position r9c6</label>
-      <input id="r9c6" name="r9c6" type="number" value="4">
-      <label for="r9c7">position r9c7</label>
-      <input id="r9c7" name="r9c7" type="number" value="3">
-      <label for="r9c8">position r9c8</label>
-      <input id="r9c8" name="r9c8" type="number" value="2">
-      <label for="r9c9">position r9c9</label>
-      <input id="r9c9" name="r9c9" type="number" value="1">
-
-      <button type="submit">Submit</button>
-    </form>
-    <h1 id="solution"></h1>
+    <div class="container">
+      <h1>Sudoku checker</h1>
+      <div class="col">
+        <div class="a">
+          <form id="sudoku-form">
+            <table>
+                <tr>
+                  <td><input id="r1c1"  value="1"/></td>
+                  <td><input id="r1c2"  value="2"/></td>
+                  <td><input id="r1c3"  value="3"/></td>
+                  <td><input id="r1c4"  value="4"/></td>
+                  <td><input id="r1c5"  value="5"/></td>
+                  <td><input id="r1c6"  value="6"/></td>
+                  <td><input id="r1c7"  value="7"/></td>
+                  <td><input id="r1c8"  value="8"/></td>
+                  <td><input id="r1c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r2c1"  value="1"/></td>
+                  <td><input id="r2c2"  value="2"/></td>
+                  <td><input id="r2c3"  value="3"/></td>
+                  <td><input id="r2c4"  value="4"/></td>
+                  <td><input id="r2c5"  value="5"/></td>
+                  <td><input id="r2c6"  value="6"/></td>
+                  <td><input id="r2c7"  value="7"/></td>
+                  <td><input id="r2c8"  value="8"/></td>
+                  <td><input id="r2c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r3c1"  value="1"/></td>
+                  <td><input id="r3c2"  value="2"/></td>
+                  <td><input id="r3c3"  value="3"/></td>
+                  <td><input id="r3c4"  value="4"/></td>
+                  <td><input id="r3c5"  value="5"/></td>
+                  <td><input id="r3c6"  value="6"/></td>
+                  <td><input id="r3c7"  value="7"/></td>
+                  <td><input id="r3c8"  value="8"/></td>
+                  <td><input id="r3c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r4c1"  value="1"/></td>
+                  <td><input id="r4c2"  value="2"/></td>
+                  <td><input id="r4c3"  value="3"/></td>
+                  <td><input id="r4c4"  value="4"/></td>
+                  <td><input id="r4c5"  value="5"/></td>
+                  <td><input id="r4c6"  value="6"/></td>
+                  <td><input id="r4c7"  value="7"/></td>
+                  <td><input id="r4c8"  value="8"/></td>
+                  <td><input id="r4c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r5c1"  value="1"/></td>
+                  <td><input id="r5c2"  value="2"/></td>
+                  <td><input id="r5c3"  value="3"/></td>
+                  <td><input id="r5c4"  value="4"/></td>
+                  <td><input id="r5c5"  value="5"/></td>
+                  <td><input id="r5c6"  value="6"/></td>
+                  <td><input id="r5c7"  value="7"/></td>
+                  <td><input id="r5c8"  value="8"/></td>
+                  <td><input id="r5c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r6c1"  value="1"/></td>
+                  <td><input id="r6c2"  value="2"/></td>
+                  <td><input id="r6c3"  value="3"/></td>
+                  <td><input id="r6c4"  value="4"/></td>
+                  <td><input id="r6c5"  value="5"/></td>
+                  <td><input id="r6c6"  value="6"/></td>
+                  <td><input id="r6c7"  value="7"/></td>
+                  <td><input id="r6c8"  value="8"/></td>
+                  <td><input id="r6c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r7c1"  value="1"/></td>
+                  <td><input id="r7c2"  value="2"/></td>
+                  <td><input id="r7c3"  value="3"/></td>
+                  <td><input id="r7c4"  value="4"/></td>
+                  <td><input id="r7c5"  value="5"/></td>
+                  <td><input id="r7c6"  value="6"/></td>
+                  <td><input id="r7c7"  value="7"/></td>
+                  <td><input id="r7c8"  value="8"/></td>
+                  <td><input id="r7c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r8c1"  value="1"/></td>
+                  <td><input id="r8c2"  value="2"/></td>
+                  <td><input id="r8c3"  value="3"/></td>
+                  <td><input id="r8c4"  value="4"/></td>
+                  <td><input id="r8c5"  value="5"/></td>
+                  <td><input id="r8c6"  value="6"/></td>
+                  <td><input id="r8c7"  value="7"/></td>
+                  <td><input id="r8c8"  value="8"/></td>
+                  <td><input id="r8c9"  value="9"/></td>
+                </tr>
+                <tr>
+                  <td><input id="r9c1"  value="1"/></td>
+                  <td><input id="r9c2"  value="2"/></td>
+                  <td><input id="r9c3"  value="3"/></td>
+                  <td><input id="r9c4"  value="4"/></td>
+                  <td><input id="r9c5"  value="5"/></td>
+                  <td><input id="r9c6"  value="6"/></td>
+                  <td><input id="r9c7"  value="7"/></td>
+                  <td><input id="r9c8"  value="8"/></td>
+                  <td><input id="r9c9"  value="9"/></td>
+                </tr>
+            </table>
+            <div id="button">
+              <button type="submit" class="btn btn-success center-block">check</button>
+            </div>
+          </form>
+      <ul id="solution"></ul>
+    </div>
   </body>
 </html>

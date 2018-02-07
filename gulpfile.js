@@ -46,7 +46,7 @@ gulp.task('concatInterface', function() {
 
 
 //make all js files into app.js
-gulp.task('jsBrowserify', ['concatInterface'], function() {
+gulp.task('jsBrowserify', ['concatInterface', 'cssBuild'], function() {
   return browserify({ entries: ['./tmp/allConcat.js']})
     .transform(babelify.configure({
       presets: ["es2015"]
@@ -69,7 +69,7 @@ gulp.task("clean", function(){
   return del(['build', 'tmp']);
 });
 
-gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
+gulp.task('jsBuild', ['jsBrowserify', 'jshint', 'cssBuild'], function(){
   browserSync.reload();
 });
 
@@ -86,9 +86,14 @@ gulp.task('serve', function() {
   });
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
+  gulp.watch(['css/*.css'], ['jsBuild'])
 });
 
-
+gulp.task('cssBuild', function() {
+  return gulp.src('./css/*.css')
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest('./build/css'));
+});
 
 //make all js devDependencies one file
 gulp.task('bowerJS', function () {

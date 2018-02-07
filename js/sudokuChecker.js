@@ -20,38 +20,63 @@ export class Puzzle {
     this.col7 = [r1c7, r2c7, r3c7, r4c7, r5c7, r6c7, r7c7, r8c7, r9c7];
     this.col8 = [r1c8, r2c8, r3c8, r4c8, r5c8, r6c8, r7c8, r8c8, r9c8];
     this.col9 = [r1c9, r2c9, r3c9, r4c9, r5c9, r6c9, r7c9, r8c9, r9c9];
+    this.correct = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    this.results = [];
+    this.arraysToCheck = [this.row1, this.row2, this.row3, this.row4, this.row5, this.row6, this.row7, this.row8, this.row9, this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7, this.col8, this.col9];
   }
 
   checkPuzzle() {
-    let arraysToCheck = [this.row1, this.row2, this.row3, this.row4, this.row5, this.row6, this.row7, this.row8, this.row9, this.col1, this.col2, this.col3, this.col4, this.col5, this.col6, this.col7, this.col8, this.col9];
-    let correct = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let results = [];
-    for(var i = 0; i < arraysToCheck.length; i++) {
-      let array = arraysToCheck[i].sort();
-      console.log(array);
+    for(let i = 0; i < this.arraysToCheck.length; i++) {
+      let array = this.arraysToCheck[i].sort();
+      //console.log(array);
       let arrayResults = [];
-      console.log("arrayResults: "+i);
-        for(var j = 0; j < array.length; j++){
-            console.log("array:  "+ j);
-            if(array[j] == correct[j]){//just adding a newline for readability purpose
+      //console.log("arrayResults: "+i);
+        for(let j = 0; j < array.length; j++){
+            //console.log("array:  "+ j);
+            if(array[j] == this.correct[j]){//just adding a newline for readability purpose
                 arrayResults.push('pass');
-                console.log('pass');
+                //console.log('pass');
             } else {
-              arrayResults.push('fail')
-              console.log('fail');;
+              arrayResults.push('fail');
+              //console.log('fail');
             }
         }
         if(arrayResults.includes("fail")) {
-          results.push("fail");
+          this.results.push("fail");
         } else {
-          results.push("pass");
+          this.results.push("pass");
         }
     }
-    console.log(results);
-    if(results.includes("fail")) {
+    //console.log(results);
+    if(this.results.includes("fail")) {
       return false;
     } else {
       return true;
     }
   }
+
+  getErrors() {
+    //get index for each fail in this.results
+    let failIndexes = [];
+    let failArrays = [];
+    let errors = [];
+    let columnNames = ["Row 1", "Row 2", "Row 3", "Row 4", "Row 5", "Row 6", "Row 7", "Row 9", "Row 9", "Column 1", "Column 2", "Column 3", "Column 4", "Column 5", "Column 6", "Column 7", "Column 8", "Column 9"]
+    for (let i = 0; i < this.results.length; i++) {
+      if (this.results[i] === "fail") {
+        failIndexes.push(i);
+        }
+      }
+    //pull correct corresponding column or row name from arraysToCheck
+    for (let j = 0; j < failIndexes.length; j++) {
+      failArrays.push(this.arraysToCheck[failIndexes[j]]);
+      console.log(this.arraysToCheck[failIndexes[j]]);
+      console.log(columnNames[failIndexes[j]]);
+      errors.push(columnNames[failIndexes[j]] + " with value " + this.arraysToCheck[failIndexes[j]] + " does not pass");
+    }
+    //add that to the errors list in readable form
+    console.log(errors);
+    return errors;
+  }
+
+
 }
